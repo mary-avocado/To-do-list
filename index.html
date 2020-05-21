@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To do list</title>
+  
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      .item {
+        margin: 10px;
+      }
+      .item input[type="text"] {
+        font-size: 1rem;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        border-bottom: 1px solid #eee;
+      }
+      .done {
+        color: #CECECE;
+        text-decoration: line-through;
+      }
+
+    </style>
+
+    <script>
+      window.onload = 
+        function () {
+          const items = 
+            Array.from(document.getElementsByClassName("item"));
+          items.forEach(
+            function (item) {
+              const checkbox = item.children[0];
+              const textinput = item.children[1];
+              checkbox.addEventListener(
+                "change",
+                function (event) {
+                  if (checkbox.checked) {
+                    textinput.classList.add("done");
+                  } else {
+                    textinput.classList.remove("done");
+                  }
+                }
+              );
+            }
+          );
+          
+        }
+    </script>
+  </head>
+
+  <body>
+    <h1> To do list </h1>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+    <div class="item">
+      <input type="checkbox"> 
+      <input type="text" size="100">
+    </div>
+
+  </body>
+
+</html>
